@@ -1,0 +1,26 @@
+# File: environment.yml
+# Purpose: Conda environment specification for the VGG-19 BCCD project.
+# Author: Aman Verma (23bcs012), Ankit Kashyap (23bcs017), Abhishek Chauhan (23bcs003)
+# Affiliation: School of Computer science and Engineering, Shri Mata Vaishno Devi University
+# Contact: info@smvdu.ac.in
+
+name: vgg19-bccd
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip=24.0
+  - pip:
+      - torch==2.3.1
+      - torchvision==0.18.1
+      - numpy==1.26.4
+      - pandas==2.2.2
+      - matplotlib==3.8.4
+      - seaborn==0.13.2
+      - scikit-learn==1.4.2
+      - Pillow==10.3.0
+      - tqdm==4.66.4
+      - PyYAML==6.0.1
+      - tensorboard==2.16.2
+      - opencv-python==4.10.0.84

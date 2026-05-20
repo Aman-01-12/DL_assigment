@@ -1,0 +1,53 @@
+# File: configs/config.yaml
+# Purpose: Centralized hyperparameters and paths for training and evaluation.
+# Author: Aman Verma (23bcs012), Ankit Kashyap (23bcs017), Abhishek Chauhan (23bcs003)
+# Affiliation: School of Computer science and Engineering, Shri Mata Vaishno Devi University
+# Contact: info@smvdu.ac.in
+
+project:
+  name: VGGNet19-BloodCell-Classification
+  seed: 42
+
+paths:
+  dataset_root: dataset/dataset2-master/dataset2-master/images
+  train_dir: dataset/dataset2-master/dataset2-master/images/TRAIN
+  test_dir: dataset/dataset2-master/dataset2-master/images/TEST
+  checkpoints_dir: checkpoints
+  figures_dir: figures
+  logs_dir: logs
+
+data:
+  input_size: 224
+  num_classes: 4
+  class_names:
+    - EOSINOPHIL
+    - LYMPHOCYTE
+    - MONOCYTE
+    - NEUTROPHIL
+  batch_size: 32
+  num_workers: 4
+  pin_memory: true
+  val_split: 0.2
+  stratify: true
+  max_samples_per_class: 200
+
+model:
+  pretrained: true
+  freeze_features: false
+  dropout: 0.5
+
+train:
+  epochs: 2
+  early_stopping_patience: 5
+  early_stopping_delta: 0.001
+  criterion: cross_entropy
+
+optimizer:
+  name: Adam
+  lr: 0.0001
+  weight_decay: 0.0001
+
+scheduler:
+  name: StepLR
+  step_size: 7
+  gamma: 0.1

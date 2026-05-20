@@ -10,7 +10,6 @@ Contact: info@smvdu.ac.in
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Overview
 This project trains and evaluates a VGG-19 model on the Blood Cell Images (BCCD) dataset to classify four blood cell types.
@@ -80,4 +79,7 @@ python src/figures.py --config configs/config.yaml
 Notes: Metrics above are from a 2-epoch quick run on a small subset for feasibility on a MacBook Air.
 
 ## License
-MIT License
+© Aman Verma, Ankit Kashyap, Abhishek Chauhan, 2026. All Rights Reserved.
+This project is submitted as academic coursework.
+No reuse or redistribution permitted without permission.
+
